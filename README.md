@@ -20,7 +20,7 @@ I built this app as part of my internship task. The idea is simple - companies r
 
 ## Live App
 
-- App: https://invoice-consolidation-app.vercel.app
+- App: https://invoiceapp-git-main-jeevanrajendraprasads-projects.vercel.app/
 - API Docs: https://invoice-backend.onrender.com/docs
 
 Just open the app link, upload any invoice file and it will extract the data automatically.
