@@ -7,7 +7,6 @@ from app.routers import upload, invoices
 
 logging.basicConfig(level=logging.DEBUG)
 
-# Create all tables on startup
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
@@ -18,7 +17,13 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://invoiceapp-psi.vercel.app",
+        "https://invoiceapp-git-main-jeevanrajendraprasads-projects.vercel.app",
+        "*"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
