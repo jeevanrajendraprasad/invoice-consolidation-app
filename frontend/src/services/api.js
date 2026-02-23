@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "/api",
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:8000",
 });
 
 export const uploadFiles = (formData, onUploadProgress) =>
@@ -19,6 +19,6 @@ export const fetchInvoice = (id) =>
 export const fetchLogs = () =>
   api.get("/logs");
 
-export const getExportUrl = () => "/api/export";
+export const getExportUrl = () => `${import.meta.env.VITE_API_URL || "http://localhost:8000"}/export`;
 
 export default api;
